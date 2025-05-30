@@ -1,3 +1,9 @@
+import { AllIdeasPage } from './pages/allIdeasPage'
+
 export const App = () => {
-  return <div>App</div>
+  return (
+    <div>
+      <AllIdeasPage />
+    </div>
+  )
 }
