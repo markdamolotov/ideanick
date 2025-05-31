@@ -7,7 +7,9 @@
     "w": "pnpm --filter @ideanick/webapp",
     "dev": "pnpm -r --parallel dev",
     "types": "concurrently \"pnpm b types\" \"pnpm w types\"",
-    "prettify": "pnpm -r --parallel prettify"
+    "prettify": "pnpm -r --parallel prettify",
+    "lint": "concurrently \"pnpm w lint\" \"pnpm b lint\"",
+    "lint:fix": "concurrently \"pnpm w lint:fix\" \"pnpm b lint:fix\""
   },
   "keywords": [],
   "author": "",
