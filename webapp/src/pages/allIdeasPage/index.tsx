@@ -1,8 +1,9 @@
 import { useQuery } from '@tanstack/react-query'
+
 import { trpc } from '../../lib/trpc'
 
 export const AllIdeasPage = () => {
-  const { data, error, isLoading, isFetching, isError } = useQuery(
+  const { data, error, isError, isFetching, isLoading } = useQuery(
     trpc.getIdeas.queryOptions()
   )
 
