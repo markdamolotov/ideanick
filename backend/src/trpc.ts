@@ -1,9 +1,9 @@
 import { initTRPC } from '@trpc/server'
 
 const ideas = [
-  { nick: 'nick1', name: 'name1', description: 'description1' },
-  { nick: 'nick2', name: 'name2', description: 'description2' },
-  { nick: 'nick3', name: 'name3', description: 'description3' }
+  { description: 'description1', name: 'name1', nick: 'nick1' },
+  { description: 'description2', name: 'name2', nick: 'nick2' },
+  { description: 'description3', name: 'name3', nick: 'nick3' }
 ]
 
 const trpc = initTRPC.create()
