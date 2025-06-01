@@ -9,13 +9,16 @@
     "types": "concurrently \"pnpm b types\" \"pnpm w types\"",
     "prettify": "pnpm -r --parallel prettify",
     "lint": "concurrently \"pnpm w lint\" \"pnpm b lint\"",
-    "lint:fix": "concurrently \"pnpm w lint:fix\" \"pnpm b lint:fix\""
+    "lint:fix": "concurrently \"pnpm w lint:fix\" \"pnpm b lint:fix\"",
+    "prepare": "husky"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@10.11.0",
   "devDependencies": {
-    "concurrently": "^9.1.2"
+    "concurrently": "^9.1.2",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.0"
   }
 }
