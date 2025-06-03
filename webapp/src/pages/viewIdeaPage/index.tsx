@@ -1,7 +1,9 @@
 import { useParams } from 'react-router'
 
+import type { ViewIdeaRouteParameters } from '@/shared/lib/routes'
+
 export const ViewIdeaPage = () => {
-  const { ideaNick } = useParams() as { ideaNick: string }
+  const { ideaNick } = useParams() as ViewIdeaRouteParameters
 
   return (
     <div>

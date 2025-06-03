@@ -2,7 +2,11 @@ import { BrowserRouter, Route, Routes } from 'react-router'
 
 import { AllIdeasPage } from '@/pages/allIdeasPage'
 import { ViewIdeaPage } from '@/pages/viewIdeaPage'
-import { getAllIdeasRoute, getViewIdeaRoute } from '@/shared/lib/routes'
+import {
+  getAllIdeasRoute,
+  getViewIdeaRoute,
+  viewIdeaRouteParameters
+} from '@/shared/lib/routes'
 
 export const Router = () => {
   return (
@@ -11,7 +15,7 @@ export const Router = () => {
         <Route element={<AllIdeasPage />} path={getAllIdeasRoute()} />
         <Route
           element={<ViewIdeaPage />}
-          path={getViewIdeaRoute({ ideaNick: ':ideaNick' })}
+          path={getViewIdeaRoute(viewIdeaRouteParameters)}
         />
       </Routes>
     </BrowserRouter>
