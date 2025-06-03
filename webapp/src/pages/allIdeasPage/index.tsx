@@ -1,8 +1,8 @@
 import { useQuery } from '@tanstack/react-query'
 import { Link } from 'react-router'
 
-import { getViewIdeaRoute } from '../../lib/routes'
-import { trpc } from '../../lib/trpc'
+import { getViewIdeaRoute } from '../../shared/lib/routes'
+import { trpc } from '../../shared/lib/trpc'
 
 export const AllIdeasPage = () => {
   const { data, error, isError, isFetching, isLoading } = useQuery(
