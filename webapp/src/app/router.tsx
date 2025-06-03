@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router'
 
+import { Layout } from '@/app/layout'
 import { AllIdeasPage } from '@/pages/allIdeasPage'
 import { ViewIdeaPage } from '@/pages/viewIdeaPage'
 import {
@@ -12,11 +13,13 @@ export const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route element={<AllIdeasPage />} path={getAllIdeasRoute()} />
-        <Route
-          element={<ViewIdeaPage />}
-          path={getViewIdeaRoute(viewIdeaRouteParameters)}
-        />
+        <Route element={<Layout />}>
+          <Route element={<AllIdeasPage />} path={getAllIdeasRoute()} />
+          <Route
+            element={<ViewIdeaPage />}
+            path={getViewIdeaRoute(viewIdeaRouteParameters)}
+          />
+        </Route>
       </Routes>
     </BrowserRouter>
   )
