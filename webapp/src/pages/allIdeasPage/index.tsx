@@ -1,5 +1,7 @@
 import { useQuery } from '@tanstack/react-query'
+import { Link } from 'react-router'
 
+import { getViewIdeaRoute } from '../../lib/routes'
 import { trpc } from '../../lib/trpc'
 
 export const AllIdeasPage = () => {
@@ -20,7 +22,9 @@ export const AllIdeasPage = () => {
       <ul>
         {data?.ideas.map((idea) => (
           <li key={idea.nick}>
-            <p>{idea.name}</p>
+            <Link to={getViewIdeaRoute({ ideaNick: idea.nick })}>
+              <p>{idea.name}</p>
+            </Link>
             <p>{idea.description}</p>
           </li>
         ))}
