@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Routes } from 'react-router'
 
-import { AllIdeasPage } from '../pages/allIdeasPage'
-import { ViewIdeaPage } from '../pages/viewIdeaPage'
-import { getAllIdeasRoute, getViewIdeaRoute } from '../shared/lib/routes'
+import { AllIdeasPage } from '@/pages/allIdeasPage'
+import { ViewIdeaPage } from '@/pages/viewIdeaPage'
+import { getAllIdeasRoute, getViewIdeaRoute } from '@/shared/lib/routes'
 
 export const Router = () => {
   return (
