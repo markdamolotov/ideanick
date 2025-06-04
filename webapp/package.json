@@ -8,6 +8,8 @@
     "build": "tsc -b && vite build",
     "lint": "eslint --cache --cache-location node_modules/.cache/eslint/.eslintcache .",
     "lint:fix": "pnpm lint --fix",
+    "stylelint": "stylelint --cache --cache-location node_modules/.cache/stylelint/.stylelintcache \"src/**/*.scss\"",
+    "stylelint:fix": "stylelint --cache --cache-location node_modules/.cache/stylelint/.stylelintcache \"src/**/*.scss\" --fix",
     "preview": "vite preview",
     "prettify": "prettier --cache --write \"src/**/*.{js,jsx,ts,tsx,json,yml,scss}\" \"!**/{node_modules,dist}/**/*\"",
     "types": "tsc --noEmit --project tsconfig.json && tsc --noEmit --project tsconfig.node.json && tsc --noEmit --project tsconfig.app.json"

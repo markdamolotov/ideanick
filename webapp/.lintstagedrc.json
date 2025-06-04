@@ -3,5 +3,9 @@
     "eslint --cache --cache-location node_modules/.cache/eslint/.eslintcache --fix",
     "prettier --log-level warn --cache --write"
   ],
-  "*.{scss,json,yml}": "prettier --log-level warn --cache --write"
+  "*.scss": [
+    "stylelint --cache --cache-location node_modules/.cache/stylelint/.stylelintcache \"src/**/*.scss\" --fix",
+    "prettier --log-level warn --cache --write"
+  ],
+  "*.{json,yml}": "prettier --log-level warn --cache --write"
 }
