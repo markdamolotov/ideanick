@@ -1,0 +1,49 @@
+@use '@/app/styles/utils/utils' as *;
+
+.layout {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 24px;
+  height: 100%;
+  padding-inline: 24px;
+
+  @include media('<=tablet') {
+    flex-flow: column nowrap;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 200px;
+    padding-top: 24px;
+
+    @include media('<=tablet') {
+      width: 100%;
+    }
+
+    .logo {
+      font-size: var(--text-xl);
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .navigation {
+      height: 100%;
+
+      @include media('<=tablet') {
+        height: auto;
+      }
+    }
+  }
+
+  .main {
+    flex: 1;
+    height: 100%;
+    padding-top: 24px;
+
+    @include media('<=tablet') {
+      padding-top: 0;
+    }
+  }
+}

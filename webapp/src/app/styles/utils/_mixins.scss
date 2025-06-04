@@ -1,0 +1,8 @@
+@mixin h1 {
+  font-size: var(--text-3xl);
+  margin: 0;
+}
+
+@mixin h2 {
+  font-size: var(--text-lg);
+}

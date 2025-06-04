@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router'
 
-import { Layout } from '@/app/layout'
+import { Layout } from '@/app/layout/layout'
 import { AllIdeasPage } from '@/pages/allIdeasPage'
 import { ViewIdeaPage } from '@/pages/viewIdeaPage'
 import {

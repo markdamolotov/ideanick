@@ -3,6 +3,7 @@ import { useParams } from 'react-router'
 
 import type { ViewIdeaRouteParameters } from '@/shared/lib/routes'
 
+import css from '@/pages/viewIdeaPage/index.module.scss'
 import { trpc } from '@/shared/lib/trpc'
 
 export const ViewIdeaPage = () => {
@@ -25,10 +26,13 @@ export const ViewIdeaPage = () => {
   }
 
   return (
-    <div>
-      <h1>{data.idea.name}</h1>
+    <div className={css.idea}>
+      <h1 className={css.title}>{data.idea.name}</h1>
       <p>{data.idea.description}</p>
-      <div dangerouslySetInnerHTML={{ __html: data.idea.text }} />
+      <div
+        className={css.text}
+        dangerouslySetInnerHTML={{ __html: data.idea.text }}
+      />
     </div>
   )
 }
