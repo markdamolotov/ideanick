@@ -1,10 +1,10 @@
-@use '@/app/styles/utils/utils' as *;
+@use '../styles/utils/utils' as *;
 
 .layout {
   display: flex;
+  height: 100%;
   flex-flow: row nowrap;
   gap: 24px;
-  height: 100%;
   padding-inline: 24px;
 
   @include media('<=tablet') {
@@ -13,10 +13,10 @@
 
   .header {
     display: flex;
-    flex-direction: column;
-    gap: 8px;
     width: 200px;
+    flex-direction: column;
     padding-top: 24px;
+    gap: 8px;
 
     @include media('<=tablet') {
       width: 100%;
@@ -46,8 +46,8 @@
   }
 
   .main {
-    flex: 1;
     height: 100%;
+    flex: 1;
     padding-top: 24px;
 
     @include media('<=tablet') {

@@ -10,6 +10,7 @@
     "lint:fix": "pnpm lint --fix",
     "stylelint": "stylelint --cache --cache-location node_modules/.cache/stylelint/.stylelintcache \"src/**/*.scss\"",
     "stylelint:fix": "stylelint --cache --cache-location node_modules/.cache/stylelint/.stylelintcache \"src/**/*.scss\" --fix",
+    "style:check": "sass --update -q src:./node_modules/.cache/.stylecheckcache",
     "preview": "vite preview",
     "prettify": "prettier --cache --write \"src/**/*.{js,jsx,ts,tsx,json,yml,scss}\" \"!**/{node_modules,dist}/**/*\"",
     "types": "tsc --noEmit --project tsconfig.json && tsc --noEmit --project tsconfig.node.json && tsc --noEmit --project tsconfig.app.json"
@@ -46,9 +47,15 @@
     "globals": "^16.0.0",
     "normalize.css": "^8.0.1",
     "prettier": "^3.5.3",
+    "sass-alias": "^2.0.1",
     "stylelint": "^16.20.0",
+    "stylelint-config-idiomatic-order": "^10.0.0",
     "stylelint-config-prettier-scss": "^1.0.0",
+    "stylelint-config-recommended-scss": "^15.0.1",
     "stylelint-config-standard-scss": "^15.0.1",
+    "stylelint-declaration-block-no-ignored-properties": "^2.8.0",
+    "stylelint-order": "^7.0.0",
+    "stylelint-scss": "^6.12.0",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.30.1",
     "vite": "^6.3.5"

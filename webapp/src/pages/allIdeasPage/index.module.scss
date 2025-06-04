@@ -1,9 +1,9 @@
-@use '@/app/styles/utils/utils' as *;
+@use '../../app/styles/utils/utils' as *;
 
 .ideas {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   gap: 16px;
+  grid-template-columns: repeat(3, 1fr);
 
   @include media('<=desktop') {
     grid-template-columns: repeat(2, 1fr);

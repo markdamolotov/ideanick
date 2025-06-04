@@ -1,12 +1,12 @@
-@use '@/app/styles/utils/utils' as *;
+@use '../../../../app/styles/utils/utils' as *;
 
 .idea {
   display: flex;
   flex-direction: column;
-  gap: 8px;
   padding: 16px;
-  background-color: var(--color-bg);
   border-radius: 8px;
+  background-color: var(--color-bg);
+  gap: 8px;
 
   .idea-title {
     @include h3;
