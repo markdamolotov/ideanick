@@ -1,38 +1,15 @@
 @use '@/app/styles/utils/utils' as *;
 
-.container {
-  display: flex;
-  flex-direction: column;
+.ideas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 16px;
 
-  .title {
-    @include h1;
+  @include media('<=desktop') {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .ideas {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-
-    @include media('<=desktop') {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    @include media('<=phone') {
-      grid-template-columns: repeat(1, 1fr);
-    }
-
-    .idea {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      padding: 16px;
-      background-color: var(--color-bg);
-      border-radius: 8px;
-
-      .ideaTitle {
-        @include h2;
-      }
-    }
+  @include media('<=phone') {
+    grid-template-columns: repeat(1, 1fr);
   }
 }

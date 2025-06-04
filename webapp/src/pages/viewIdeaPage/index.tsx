@@ -5,6 +5,7 @@ import type { ViewIdeaRouteParameters } from '@/shared/lib/routes'
 
 import css from '@/pages/viewIdeaPage/index.module.scss'
 import { trpc } from '@/shared/lib/trpc'
+import { Segment } from '@/shared/ui/segment'
 
 export const ViewIdeaPage = () => {
   const { ideaNick } = useParams() as ViewIdeaRouteParameters
@@ -26,13 +27,11 @@ export const ViewIdeaPage = () => {
   }
 
   return (
-    <div className={css.idea}>
-      <h1 className={css.title}>{data.idea.name}</h1>
-      <p>{data.idea.description}</p>
+    <Segment description={data.idea.description} title={data.idea.name}>
       <div
         className={css.text}
         dangerouslySetInnerHTML={{ __html: data.idea.text }}
       />
-    </div>
+    </Segment>
   )
 }

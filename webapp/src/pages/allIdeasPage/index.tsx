@@ -1,9 +1,9 @@
 import { useQuery } from '@tanstack/react-query'
-import { Link } from 'react-router'
 
 import css from '@/pages/allIdeasPage/index.module.scss'
-import { getViewIdeaRoute } from '@/shared/lib/routes'
+import { IdeaCard } from '@/pages/allIdeasPage/ui/ideaCard'
 import { trpc } from '@/shared/lib/trpc'
+import { Segment } from '@/shared/ui/segment'
 
 export const AllIdeasPage = () => {
   const { data, error, isError, isFetching, isLoading } = useQuery(
@@ -19,20 +19,10 @@ export const AllIdeasPage = () => {
   }
 
   return (
-    <div className={css.container}>
-      <h1 className={css.title}>All Ideas</h1>
+    <Segment title='All Ideas'>
       <div className={css.ideas}>
-        {data?.ideas.map((idea) => (
-          <div className={css.idea} key={idea.nick}>
-            <h2 className={css.ideaTitle}>
-              <Link to={getViewIdeaRoute({ ideaNick: idea.nick })}>
-                {idea.name}
-              </Link>
-            </h2>
-            <p>{idea.description}</p>
-          </div>
-        ))}
+        {data?.ideas.map((idea) => <IdeaCard idea={idea} key={idea.nick} />)}
       </div>
-    </div>
+    </Segment>
   )
 }

@@ -1,25 +1,26 @@
 import { Link, Outlet } from 'react-router'
 
 import css from '@/app/layout/layout.module.scss'
-import { getAllIdeasRoute } from '@/shared/lib/routes'
+import { getAllIdeasRoute, getNewIdeaRoute } from '@/shared/lib/routes'
 
 export const Layout = () => {
   return (
     <div className={css.layout}>
       <header className={css.header}>
-        <div className={css.logo}>IdeaNick</div>
+        <h1 className={css.logo}>IdeaNick</h1>
         <nav className={css.navigation}>
-          <ul>
+          <ul className={css.links}>
             <li>
               <Link to={getAllIdeasRoute()}>All Ideas</Link>
+            </li>
+            <li>
+              <Link to={getNewIdeaRoute()}>Add Idea</Link>
             </li>
           </ul>
         </nav>
       </header>
       <main className={css.main}>
-        <div>
-          <Outlet />
-        </div>
+        <Outlet />
       </main>
     </div>
   )

@@ -1,17 +1,5 @@
-@use '@/app/styles/utils/utils' as *;
-
-.idea {
+.text {
   display: flex;
   flex-direction: column;
   gap: 8px;
-
-  .title {
-    @include h1;
-  }
-
-  .text {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
 }

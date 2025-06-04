@@ -1,0 +1,21 @@
+@use '@/app/styles/utils/utils' as *;
+
+.container {
+  @include container;
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    .title {
+      @include h2;
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+}
