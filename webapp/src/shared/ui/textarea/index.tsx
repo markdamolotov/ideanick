@@ -1,28 +1,22 @@
-import type { Dispatch } from 'react'
+import type { FieldValues, Path, UseFormRegister } from 'react-hook-form'
 
-export const Textarea = ({
+import css from './index.module.scss'
+
+type TextAreaProperties<T extends FieldValues> = {
+  label: string
+  name: Path<T>
+  register: UseFormRegister<T>
+}
+
+export const Textarea = <T extends FieldValues>({
   label,
   name,
-  setState,
-  state
-}: {
-  label: string
-  name: string
-  setState: Dispatch<React.SetStateAction<Record<string, string>>>
-  state: Record<string, string>
-}) => {
+  register
+}: TextAreaProperties<T>) => {
   return (
-    <div style={{ marginBottom: 10 }}>
+    <div className={css.container}>
       <label htmlFor={name}>{label}</label>
-      <br />
-      <textarea
-        id={name}
-        name={name}
-        onChange={(event) => {
-          setState({ ...state, [name]: event.target.value })
-        }}
-        value={state[name]}
-      />
+      <textarea id={name} {...register(name)} className={css.textarea} />
     </div>
   )
 }

@@ -1,29 +1,22 @@
-import type { Dispatch } from 'react'
+import type { FieldValues, Path, UseFormRegister } from 'react-hook-form'
 
-export const Input = ({
+import css from './index.module.scss'
+
+type InputProperties<T extends FieldValues> = {
+  label: string
+  name: Path<T>
+  register: UseFormRegister<T>
+}
+
+export const Input = <T extends FieldValues>({
   label,
   name,
-  setState,
-  state
-}: {
-  label: string
-  name: string
-  setState: Dispatch<React.SetStateAction<Record<string, string>>>
-  state: Record<string, string>
-}) => {
+  register
+}: InputProperties<T>) => {
   return (
-    <div style={{ marginBottom: 10 }}>
+    <div className={css.container}>
       <label htmlFor={name}>{label}</label>
-      <br />
-      <input
-        id={name}
-        name={name}
-        onChange={(event) => {
-          setState({ ...state, [name]: event.target.value })
-        }}
-        type='text'
-        value={state[name]}
-      />
+      <input id={name} type='text' {...register(name)} className={css.input} />
     </div>
   )
 }

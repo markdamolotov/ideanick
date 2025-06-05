@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  .input {
+    width: 100%;
+    padding-block: 4px;
+    padding-inline: 8px;
+  }
+}
